@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+      authentication-database: admin
+      username: root
+      password: rootpassword
+      database: spring_login
+      port: 27017
+      host: localhost
+app:
+  tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+  tokenExpirationMsec: 864000000
+  authorizedRedirectUris:
+    - http://localhost:3000/oauth2/redirect
