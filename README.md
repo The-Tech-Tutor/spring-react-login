@@ -1,6 +1,8 @@
 # Spring React Login
 
-[[_TOC_]]
+## Setting up Gmail Login
+
+https://console.cloud.google.com/apis/credentials
 
 ## Client
 
