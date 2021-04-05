@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  box-sizing: border-box;
+}
+
+.card-container body {
+  background-color: #28223f;
+  font-family: Montserrat, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card-container h3 {
+  margin: 10px 0;
+}
+
+.card-container h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.card-container p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.card-container {
+  background-color: #231e39;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #b3b8cd;
+  padding-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.card-container .pro {
+  color: #231e39;
+  background-color: #febb0b;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.card-container .round {
+  border: 1px solid #03bfcb;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+button.primary {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  border-radius: 3px;
+  color: #231e39;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #02899c;
+}
+
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+
+.home-container {
+  text-align: center;
+  min-height: calc(100vh - 60px);
+  overflow: auto;
+  position: relative;
+  padding-top: 60px;
+}
+
+.home-title {
+  font-size: 25px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 50px;
+}
+
+.graf-bg-container {
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+  perspective: 2000px;
+  opacity: 0.7;
+}
+
+.graf-layout {
+  height: 100%;
+  margin: auto;
+  position: relative;
+  perspective: 2000px;
+}
+
+.graf-circle:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(1000deg) rotateX(1000deg) rotate(0deg);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #2098f3;
+  animation: scaleOne 5.5s infinite alternate linear;
+  opacity: 0;
+}
+
+@keyframes scaleOne {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateY(180deg) rotateX(90deg) rotate(1000deg);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(135deg) rotateY(135deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #ffa20a;
+  border-left: none;
+  border-top: none;
+  animation: scaleTwo 5s infinite alternate linear;
+}
+
+@keyframes scaleTwo {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(135deg) rotateY(135deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #ec412c;
+  border-bottom: none;
+  border-left: none;
+  animation: scaleThree 4.5s infinite alternate linear;
+}
+
+@keyframes scaleThree {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg) rotateY(45deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(45deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #fcbd00;
+  border-top: none;
+  border-right: none;
+  animation: scaleFour 4s infinite alternate linear;
+}
+
+@keyframes scaleFour {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(5) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(135deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #2da94f;
+  border-bottom: none;
+  border-left: none;
+  animation: scaleFive 3.5s infinite alternate linear;
+}
+
+@keyframes scaleFive {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(135deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(6) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(100deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 15px solid #f57700;
+  border-bottom: none;
+  border-right: none;
+  animation: scaleSix 3s infinite alternate linear;
+}
+
+@keyframes scaleSix {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(100deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(7) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(-105deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 10px solid #2098f3;
+  border-bottom: none;
+  border-left: none;
+  animation: scaleSeven 2.5s infinite alternate linear;
+}
+
+@keyframes scaleSeven {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateY(-105deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(8) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(45deg) rotateX(45deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #30bbb0;
+  border-bottom: none;
+  border-left: none;
+  animation: scaleEight 2s infinite alternate linear;
+}
+
+@keyframes scaleEight {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateY(45deg) rotateX(45deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(9) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(135deg) rotateX(135deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #ff453c;
+  border-bottom: none;
+  border-right: none;
+  animation: scaleNine 1.5s infinite alternate linear;
+}
+
+@keyframes scaleNine {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateY(135deg) rotateX(135deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(10) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(113deg) rotateX(115deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #2098f3;
+  border-bottom: none;
+  border-right: none;
+  animation: scaleTen 3s infinite alternate linear;
+}
+
+@keyframes scaleTen {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateY(113deg) rotateX(115deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.graf-circle:nth-child(11) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(-45deg) rotateY(-45deg) rotate(0deg);
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 5px solid #2098f3;
+  border-bottom: none;
+  border-right: none;
+  animation: scaleEleven 2s infinite alternate linear;
+}
+
+@keyframes scaleEleven {
+  to {
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(-45deg) rotateY(-45deg) rotate(1turn);
+    opacity: 0;
+  }
+}
+
+.home-name .profile-email {
+  font-weight: 400;
+}
+
+.home-avatar img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+
+.text-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: left;
+  border-radius: 50%;
+  background: #46b5e5;
+  background: linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -ms-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -moz-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -o-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -webkit-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+}
+
+.grid-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}

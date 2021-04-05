@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column-left {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+  margin: 10px 10px 0px 10px;
+}
+
+.column-right {
+  float: left;
+  width: 65%;
+  margin: 10px 10px 0px 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column-left {
+    width: 100%;
+    display: block;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  .column-right {
+    width: 100%;
+    display: block;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info .profile-avatar img {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+.profile-info .profile-name {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.profile-info .profile-email {
+  font-weight: 400;
+}
+
+.text-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: left;
+  border-radius: 50%;
+  background: #46b5e5;
+  background: linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -ms-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -moz-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -o-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: -webkit-linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+  background-image: linear-gradient(45deg, #46b5e5 1%, #1e88e5 64%, #40baf5 97%);
+}
+
+.text-avatar span {
+  line-height: 200px;
+  color: #fff;
+  font-size: 3em;
+}
+
+/**
+ * Panels
+ */
+/*** General styles ***/
+.panel {
+  box-shadow: none;
+}
+.panel-heading {
+  border-bottom: 0;
+}
+.panel-title {
+  font-size: 17px;
+}
+.panel-title small {
+  font-size: 0.75em;
+  color: #999999;
+}
+.panel-body *:first-child {
+  margin-top: 0;
+}
+.panel-footer {
+  border-top: 0;
+}
+
+.panel-default .panel-heading {
+  color: #333333;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.07);
+}
+
+form label {
+  color: #999999;
+  font-weight: 400;
+}
+
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+
+.profile__contact-info-icon {
+  float: left;
+  font-size: 18px;
+  color: #999999;
+}
+.profile__contact-info-body {
+  overflow: hidden;
+  padding-left: 20px;
+  color: #999999;
+}
+.profile-avatar {
+  width: 200px;
+  position: relative;
+  margin: 0px auto;
+  margin-top: 196px;
+  border: 4px solid #f3f3f3;
+}
